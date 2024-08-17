@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how to make delicious chocolate cupcakes with this simple recipe from Gluten-Free Palate.">
+  <title>Chocolate Cupcakes Recipe</title>
+  <link rel="stylesheet" href="recipe-styles.css">
+</head>
+<body>
+  <article>
+      <header>
+          <h1>Chocolate Cupcakes from GFP</h1>
+          <img src="cupcakes.jpg" alt="Chocolate Cupcakes" class="recipe-img">
+      </header>
+      <section class="ingredients">
+          <h2>Ingredients</h2>
+          <ul>
+              <li>1 ½ cups granulated sugar</li>
+              <li>2 cups all-purpose gluten-free flour blend</li>
+              <li>¾ cup unsweetened cocoa</li>
+              <li>1 ½ teaspoons gluten-free baking powder</li>
+              <li>1 ½ teaspoons baking soda</li>
+              <li>1 teaspoon salt</li>
+              <li>2 large eggs</li>
+              <li>1 cup milk</li>
+              <li>½ cup vegetable oil</li>
+              <li>1 ½ teaspoons gluten-free vanilla extract</li>
+              <li>¾ cup boiling water</li>
+              <!-- More ingredients -->
+          </ul>
+      </section>
+      <section class="instructions">
+          <h2>Instructions</h2>
+          <ol>
+              <li>Preheat oven to 350°F (180°C). Position rack in center of oven. Line two 12-serving cupcake pans with paper liners; set aside.</li>
+              <li>In a large mixing bowl, stir together sugar, flour, cocoa, baking powder, baking soda, and salt until there are no visible clumps.</li>
+              <li>Add eggs, milk, oil, and vanilla. Beat with a mixer on medium speed for two minutes.</li>
+              <li>Stir in boiling water.</li>
+              <li>Spoon batter evenly into cupcake wells. Bake for 20 to 22 minutes, or until a toothpick inserted in the center comes out clean.</li>
+              <li>Remove from oven and let cool in the pan for 5 minutes, then remove from pan and let cool on a rack.</li>
+              <li>Store in an airtight container at room temperature for up to three days, or in the refrigerator for up to a week.</li>
+              <!-- More steps -->
+          </ol>
+      </section>
+  </article>
+  <footer>
+      <p>Recipe by <a href="https://www.glutenfreepalate.com/easy-gluten-free-chocolate-cupcakes/">Gluten-Free Palate</a></p>
+  </footer>
+</body>
+</html>
+Use this HTML editor to try the code for this project.
+
+Try It Yourself »
+
+Note that I’m building this recipe around one of my favorites. They’re (gluten-free) chocolate cupcakes. 
+
+First, we’ll add the recipe details.
+
+Adding Recipe Details with HTML
+Ok, so a recipe page basically needs at least one unordered list. That’s for the ingredients. It’s unordered because it doesn’t matter which is listed first. They’ll appear as bullet points.
+
+It also includes an ordered list. This is the most important part of a recipe page, and the order of the instructions matter.
+
+To make an unordered list, use <ul> and </ul> tags to surround your list. Then use <li> and </li> tags for each list item.
+
+Here’s what that looks like.
+
+An unordered list for my recipe page
+
+An ordered list looks pretty similar. You just use <ol> instead of <ul>.
+
+Check it out here.
+
+An ordered list for my HTML recipe page.
+
+We're also adding meta information to the header tag. You can see these with the "meta name=" lines. It's common practice to add these to any HTML page where you plan to index with a search engine.
+
+The meta name tells search engines what the page is called. The description tells the engine what the page is about.
+
+The other notable addition here is the <article> tag. This differentiates the section on the page, and it allows me add additional types of content on this page.
+
+Once you’ve got the basics of your recipe, you can move on to the CSS.
+
+
+Improving the Look of the HTML Project with CSS
+You'll want to include some CSS formatting to help your recipe page stand out from other HTML projects. Here are the components I'd recommend, broken out by what they do.
+
+Here's the full CSS I used. You can add it in the CSS tab of my HTML compiler.
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+.bio, .projects {
+  margin-bottom: 20px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+Try It Yourself »
+
+Now, let's break that down. Here are each of the parts (and what they do).
+
+CSS Basics for the Recipe Page
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+This section resets the default margin and padding for all elements (* selects all elements). It also ensures the box-sizing property is set to border-box. That means my recipe page's padding and border are included in the total width and height.
+
+Customizing the Look of the Body
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #fff9e8;
+}
+In the body section, I chose the font family. It specifies what list of fonts to use for my recipe page. It also sets the line height (in this case 1.6x the font size. That should help with accessibility.
+
+I also added 20px of padding for better readability and chose a background color that's kind of yellowish.
+
+Article Styling
+article {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+This CSS section corresponds to the article part of my HTML. I told it to limit its maximum width to 800 pixels and to automatically add a 20-pixel margin. 
+
+I also added a border and selected the background color.
+
+Heading Styles
+h1, h2 {
+  color: #5a2c02;
+}
+I didn't do much with the header formatting. I just chose the color.
+
+Image Styles
+.recipe-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+The image styles are also delegated in this CSS code. I allowed my images to take up 100% of the viewable area and set them to automatically choose the height based on the width.
+
+There's also a border-radius choice, which gives them slightly rounded corners.
+
+List Styles
+.ingredients ul, .instructions ol {
+  margin: 20px 0;
+}
+.ingredients li, .instructions li {
+  margin-bottom: 10px;
+}
+Here, I added margins around my ordered and unordered lists.
+
+Footer Styles
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+As I did with my header, I chose alignments and padding for my footer. This CSS is the last part of the formatting code.
+
+
+What It Looks Like with CSS Formatting
+The recipe page looks pretty simple once you're finished. Note that I included an image at the top, but it's not linking to an active server, so it appears broken.
+
+The recipe page with CSS formatting
+
+
+So How Do I Fix the Broken Image?
+The issue here comes from the fact that we don't have an image called cupcakes.jpg. If we replace that with an existing image, like the one used in the real recipe, it will look like this.
+
+Recipe Page with Working Image
+
+Here's the code I changed.
+
+      <header>
+          <h1>Chocolate Cupcakes from GFP</h1>
+          <img src="https://www.glutenfreepalate.com/wp-content/uploads/2018/03/Gluten-Free-Chocolate-Cupcakes1.2-679x1024.jpg" alt="Chocolate Cupcakes" class="recipe-img">
+      </header>
+Try It Yourself »
+
+
+
+Will AI Replace Programmers?
+Challenge: Differentiating Your Recipe Project
+If you decide to use this recipe page (or one like it) in your portfolio of HTML projects, you'll want to make it your own. The obvious way to do this is by choosing a different recipe. I like cupcakes, but you might prefer something savory.
+
+But that change doesn't show your grasp of HTML. Here are a few ways you might want to set your project apart from mine.
+
+Add a carousel of images to your page.
+Build a "recipe card" for your page, then add a "jump to recipe" button.
+Add information about the cook who originally devised the recipe with an author section.
+Enhance the page with JavaScript.
+If you choose to enhance your project in one of these ways, you may want to use my JavaScript compiler. It works the same way as the HTML version, except there's an extra tab for JS.
+
+About My HTML Projects
+Note that this is part of my series of HTML projects. I’m including screenshots and the HTML you’ll need to use below. I’ll also include CSS in code blocks, which you can copy and paste into your own projects.
+
+As with all of my projects, I expect you to learn the same way I did. Copy what I have, then make changes to see how it affects your results. Think you can improve on what I’ve got here? I’ll bet you can. 
+
+Note that you can use all of this HTML and CSS in my HTML compiler. It’s free to use, and you can immediately see the results of your changes when you click “run”.
+
+ 
+
+Explore More
+search...
+
+By Jim Markus
+Jim Markus manages Hackr.io and a portfolio of sites at VentureKite. He hosted Frugal Living, a popular finance podcast, and co-created The Ink & Blood Dueling Society, a theatrical writing event that appeared at conventions across the United States. He is also an award-winning game designer.
+
+View all post by the author
+Subscribe to our Newsletter for Articles, News, & Jobs.
+
+First name
+Email address
+
+
+I accept the I accept theTerms and Conditions.
+Subscribe
+Disclosure: Hackr.io is supported by its audience. When you purchase through links on our site, we may earn an affiliate commission.
+
+In this article
+
+The Foundations of a Recipe Page
+Challenge: Differentiating Your Recipe Project
+About My HTML Projects
+
+Learn More
+Top 15 Best HTML/CSS Books in 2024 | Beginner to Pro
+HTML Books Web Development
+What is a Markup Language? Definition, History, Features and Applications
+Programming Languages
+16 Best Web Development Courses in 2024 [Free + Paid]
+Courses Web Development
+
+Find Your Place In The WorldBY Amply
+
+ 
+Service Delivery Engineer 2
+Dell Technologies
+OH
+$66,300 - $85,800 a year
+See Job
+
+ 
+Senior Software Engineer, BackEnd
+Vorto Operations LLC
+Denver
+$100,000 - $200,000 a year
+See Job
+
+ 
+Software Developer - AI Trainer (Contract)
+DataAnnotation
+New York
+From $40 an hour
+See Job
+
+ 
+GAM: Government Asset Manager
+KBR
+Torrance
+$100,000 - $110,000 a year
+See Job
+
+ 
+Claims Representative- Casualty Multiline
+Intact
+St. John's
+See Job
+Search More Roles
+Please login to leave comments
+
+Always be in the loop.
+Get news once a week, and don't worry — no spam.
+
+Your email
+Subscribe
+
+
+I accept the I accept theTerms and Conditions.
+Programming
+DevOps
+Data Science
+Design
+Articles
+Roadmaps
+Jobs
+Help center
+About us
+We ❤️ Feedback
+Advertise / Partner
+Write for us
+Privacy Policy
+Cookie Policy
+Change Privacy Settings
+Disclosure Policy
+Terms and Conditions
+Disclaimer
+Refund Policy
+Follow us
+
+    
+Disclosure: This page may contain affliate links, meaning when you click the links and make a purchase, we receive a commission.
+
